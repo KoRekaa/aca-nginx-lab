@@ -35,15 +35,12 @@ jobs:
         uses: azure/container-apps-deploy-action@v2
         with:
           appSourcePath: ${{ github.workspace }}
-          _dockerfilePathKey_: _dockerfilePath_
-          _targetLabelKey_: _targetLabel_
+          dockerfilePath: Dockerfile
           registryUrl: docker.io
           registryUsername: ${{ secrets.ACANGINXFINALY5S27Q_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.ACANGINXFINALY5S27Q_REGISTRY_PASSWORD }}
           containerAppName: aca-nginx-final-y5s27q
           resourceGroup: rg-aca-lab-Y5S27Q
           imageToBuild: rekaaa/aca-nginx-final-y5s27q:${{ github.sha }}
-          _buildArgumentsKey_: |
-            _buildArgumentsValues_
 
 
